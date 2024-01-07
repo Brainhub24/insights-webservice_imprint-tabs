@@ -1,29 +1,18 @@
 <!-- Imprint language tabs including the test content for my analytics platform @WSD -->
 <div class="language-tabs">
-    <button onclick="showLanguage('de')">DE</button>
-    <button onclick="showLanguage('en')">EN</button>
+    <!-- Language buttons with accessibility labels -->
+    <button onclick="showLanguage('de')" aria-label="German">DE</button>
+    <button onclick="showLanguage('en')" aria-label="English">EN</button>
 </div>
 
-<main id="de-content" style="display: none;">
+<main id="de-content" class="imprint-content">
     <!-- German Content -->
     <h1>Impressum</h1>
     <p>German imprint content...</p>
 </main>
 
-<main id="en-content">
+<main id="en-content" class="imprint-content" style="display: none;">
     <!-- English Content -->
     <h1>Imprint</h1>
     <p>English imprint content...</p>
 </main>
-
-<script>
-function showLanguage(lang) {
-    if (lang === 'de') {
-        document.getElementById('de-content').style.display = 'block';
-        document.getElementById('en-content').style.display = 'none';
-    } else if (lang === 'en') {
-        document.getElementById('de-content').style.display = 'none';
-        document.getElementById('en-content').style.display = 'block';
-    }
-}
-</script>
